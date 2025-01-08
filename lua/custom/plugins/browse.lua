@@ -9,10 +9,8 @@ return {
     config = function()
       local bookmarks = {
         ['github'] = 'https://github.com/yg2chen',
-        ['nvim_repo'] = 'https://github.com/halyD/kickstart.nvim',
         ['portal'] = 'https://portal.nycu.edu.tw/#/',
         ['drive'] = 'https://drive.google.com/drive/u/0/my-drive',
-        ['hackmd'] = 'https://hackmd.io',
         ['repo_search'] = 'https://github.com/search?q=%s&type=repositories',
         ['youtube'] = 'https://www.youtube.com/',
       }
