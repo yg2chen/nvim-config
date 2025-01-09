@@ -11,8 +11,8 @@ return {
       require('oil').setup {}
 
       -- configs from TJ
-      vim.keymap.set('n', '-', vim.cmd.Oil)
-      vim.keymap.set('n', '<space>-', require('oil').toggle_float)
+      vim.keymap.set('n', '-', vim.cmd.Oil, { desc = 'Openup oil' })
+      vim.keymap.set('n', '<space>-', require('oil').toggle_float, { desc = 'Toggle float oil' })
     end,
   },
 }
