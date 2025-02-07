@@ -64,4 +64,11 @@ vim.expandtab = true
 
 vim.g.have_nerd_font = true
 
+-- filetypes
+vim.filetype.add {
+  extension = {
+    cl = 'opencl',
+  },
+}
+
 return {}

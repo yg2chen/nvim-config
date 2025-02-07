@@ -13,7 +13,6 @@ autocmd('TextYankPost', {
 })
 
 -- Do not continue comments if O, o, or enter pressed
-
 autocmd('BufEnter', {
   group = augroup 'comment_format_opt',
   pattern = '*',
