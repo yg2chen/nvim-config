@@ -9,10 +9,11 @@ return {
     config = function()
       local bookmarks = {
         ['github'] = 'https://github.com/yg2chen',
-        ['portal'] = 'https://portal.nycu.edu.tw/#/',
         ['drive'] = 'https://drive.google.com/drive/u/0/my-drive',
         ['repo_search'] = 'https://github.com/search?q=%s&type=repositories',
         ['youtube'] = 'https://www.youtube.com/',
+        ['zsh git'] = 'https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git',
+        ['AST Grep'] = 'https://ast-grep.github.io/guide/pattern-syntax.html',
       }
 
       vim.keymap.set('n', '<leader>b', function()

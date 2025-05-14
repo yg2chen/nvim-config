@@ -5,6 +5,7 @@ return {
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      'Marskey/telescope-sg',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
         'nvim-telescope/telescope-fzf-native.nvim',
 
@@ -19,7 +20,6 @@ return {
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -56,6 +56,16 @@ return {
         -- },
         -- pickers = {}
         extensions = {
+          ast_grep = {
+            command = {
+              'ast-grep',
+              '--json=stream',
+            },
+
+            grep_open_files = false,
+            lang = nil,
+          },
+
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
@@ -65,6 +75,7 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'ast_grep')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -73,6 +84,9 @@ return {
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind [G]rep' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
+      vim.keymap.set('n', '<leader>fa', function()
+        vim.cmd 'Telescope ast_grep'
+      end, { desc = '[F]ind [A]STGrep' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'find buffers' })
 
       -- It's also possible to pass additional configuration options.

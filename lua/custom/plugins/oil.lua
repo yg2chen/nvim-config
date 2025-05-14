@@ -8,7 +8,11 @@ return {
     dependencies = { { 'echasnovski/mini.icons', opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
     config = function()
-      require('oil').setup {}
+      require('oil').setup {
+        view_options = {
+          show_hidden = true,
+        },
+      }
 
       -- configs from TJ
       vim.keymap.set('n', '-', vim.cmd.Oil, { desc = 'Openup oil' })
