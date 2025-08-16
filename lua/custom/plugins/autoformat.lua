@@ -20,9 +20,12 @@ return {
       end,
 
       formatters_by_ft = {
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
+        -- opencl = { 'clang-format' },
+
         lua = { 'stylua' },
         python = { 'black' },
-        opencl = { 'clang-format' },
       },
     },
   },

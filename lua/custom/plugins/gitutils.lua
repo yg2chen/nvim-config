@@ -3,7 +3,7 @@ return {
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
-        add = { text = '+' },
+        add = { text = '|' },
         change = { text = '~' },
         delete = { text = '-' },
         topdelete = { text = '‾' },
@@ -66,6 +66,7 @@ return {
           gitsigns.diffthis '~'
         end, { desc = 'git [D]iff against last commit' })
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
+        map('n', '<leader>tw', gitsigns.toggle_word_diff, { desc = '[T]oggle [W]ord diff' })
       end,
     },
   },

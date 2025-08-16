@@ -25,6 +25,6 @@ require('lazy').setup({
   { import = 'custom/configs' },
 }, {
   change_detection = {
-    notify = false,
+    notify = true,
   },
 })

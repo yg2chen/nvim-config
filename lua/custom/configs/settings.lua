@@ -45,7 +45,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
@@ -60,15 +60,10 @@ vim.opt.smarttab = true
 
 vim.opt.wrap = true
 
+vim.opt.background = 'dark'
+
 vim.expandtab = true
 
 vim.g.have_nerd_font = true
-
--- filetypes
-vim.filetype.add {
-  extension = {
-    cl = 'opencl',
-  },
-}
 
 return {}

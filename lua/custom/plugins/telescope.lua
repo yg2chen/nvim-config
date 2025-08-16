@@ -54,7 +54,12 @@ return {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
+        },
+
         extensions = {
           ast_grep = {
             command = {
@@ -84,6 +89,7 @@ return {
       vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind [G]rep' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
+      vim.keymap.set('n', '<leader>fs', builtin.lsp_workspace_symbols, { desc = '[F]ind workspace [S]ymbols' })
       vim.keymap.set('n', '<leader>fa', function()
         vim.cmd 'Telescope ast_grep'
       end, { desc = '[F]ind [A]STGrep' })

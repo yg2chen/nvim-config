@@ -35,4 +35,17 @@ autocmd('BufReadPost', {
   end,
 })
 
+-- <q> quit on filetypes
+autocmd('Filetype', {
+  group = augroup 'q_close_on_ft',
+  pattern = {
+    'help',
+    'checkhealth',
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set('n', 'q', '<cmd>close<CR>', { buffer = event.buf, silent = true })
+  end,
+})
+
 return {}
