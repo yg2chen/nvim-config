@@ -1,3 +1,6 @@
 .luarc.json
 lazy-lock.json
 timer.txt
+
+# for testing lsp / treesitter etc.
+test/
