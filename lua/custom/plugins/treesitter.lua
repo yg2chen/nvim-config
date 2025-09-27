@@ -24,4 +24,67 @@ return {
         --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
         --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        config = function()
+            require('treesitter-context').setup()
+        end,
+    },
+    {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        init = function() end,
+        config = function()
+            require('nvim-treesitter.configs').setup {
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead = true,
+                        keymaps = {
+                            -- assignments
+                            ['a='] = '@assignment.outer',
+                            ['i='] = '@assignment.inner',
+                            ['l='] = '@assignment.lhs',
+                            ['r='] = '@assignment.rhs',
+
+                            -- functions
+                            ['af'] = '@function.outer',
+                            ['if'] = '@function.inner',
+
+                            -- classes
+                            ['ac'] = '@class.outer',
+                            ['ic'] = '@class.inner',
+
+                            -- conditions
+                            ['ai'] = '@conditional.outer',
+                            ['ii'] = '@conditional.inner',
+
+                            -- loops
+                            ['al'] = '@loop.outer',
+                            ['il'] = '@loop.inner',
+                        },
+                    },
+
+                    move = {
+                        enable = true,
+                        set_jumps = true,
+                        goto_next_start = {
+                            [']f'] = '@function.outer',
+                        },
+
+                        goto_next_end = {
+                            [']F'] = '@function.outer',
+                        },
+
+                        goto_previous_start = {
+                            ['[f'] = '@function.outer',
+                        },
+
+                        goto_previous_end = {
+                            ['[F'] = '@function.outer',
+                        },
+                    },
+                },
+            }
+        end,
+    },
 }
