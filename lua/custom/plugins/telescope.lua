@@ -88,20 +88,14 @@ return {
             vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '{F}ind [K]eymaps' })
             vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind [G]rep' })
+            vim.keymap.set('n', '<leader>fGb', builtin.git_branches, { desc = '[F]ind [G]it [B]ranch' })
+            vim.keymap.set('n', '<leader>fGs', builtin.git_status, { desc = '[F]ind [G]it [S]tatus' })
             vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
             vim.keymap.set('n', '<leader>fs', builtin.lsp_workspace_symbols, { desc = '[F]ind workspace [S]ymbols' })
             vim.keymap.set('n', '<leader>fa', function()
                 vim.cmd 'Telescope ast_grep'
             end, { desc = '[F]ind [A]STGrep' })
             vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'find buffers' })
-
-            -- It's also possible to pass additional configuration options.
-            vim.keymap.set('n', '<leader>f/', function()
-                builtin.live_grep {
-                    grep_open_files = true,
-                    prompt_title = 'Live Grep in Open Files',
-                }
-            end)
 
             -- Shortcut for searching your Neovim configuration files
             vim.keymap.set('n', '<leader>fn', function()

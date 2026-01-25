@@ -1,6 +1,6 @@
 -- Make line numbers default
 vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -65,5 +65,7 @@ vim.opt.background = 'dark'
 vim.expandtab = true
 
 vim.g.have_nerd_font = true
+
+vim.opt.winborder = 'rounded'
 
 return {}
