@@ -1,3 +1,6 @@
+-- Set leader key
+vim.g.mapleader = ' '
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -52,6 +55,8 @@ vim.opt.scrolloff = 10
 
 vim.opt.tabstop = 4
 
+vim.opt.softtabstop = 4
+
 vim.opt.shiftwidth = 4
 
 vim.opt.autoindent = true
@@ -67,5 +72,3 @@ vim.expandtab = true
 vim.g.have_nerd_font = true
 
 vim.opt.winborder = 'rounded'
-
-return {}

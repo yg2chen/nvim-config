@@ -1,6 +1,7 @@
 .luarc.json
 lazy-lock.json
 timer.txt
+nvim-pack-lock.json
 
 # for testing lsp / treesitter etc.
 test/

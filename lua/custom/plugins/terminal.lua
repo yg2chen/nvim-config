@@ -13,5 +13,3 @@ vim.api.nvim_create_autocmd('TermOpen', {
 
 -- escape in terminal mode
 vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>')
-
-return {}

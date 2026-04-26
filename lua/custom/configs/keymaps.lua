@@ -41,5 +41,3 @@ vim.keymap.set({ 'n', 'x' }, 'k', 'v:count == 0 ? "gk" : "k"', { expr = true, si
 
 vim.keymap.set('i', 'jk', '<ESC>')
 vim.keymap.set('i', 'kj', '<ESC>')
-
-return {}
