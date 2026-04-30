@@ -37,8 +37,8 @@ pcall(telescope.load_extension, 'ast_grep')
 
 -- See `:help telescope.builtin`
 local builtin = require 'telescope.builtin'
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind {H}elp_Tags' })
-vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '{F}ind [K]eymaps' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind [H]elp_Tags' })
+vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '[F]ind [K]eymaps' })
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind [G]rep' })
 vim.keymap.set('n', '<leader>fGb', builtin.git_branches, { desc = '[F]ind [G]it [B]ranch' })
