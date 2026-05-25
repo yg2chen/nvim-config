@@ -38,6 +38,9 @@ vim.pack.add {
     { src = 'https://github.com/chomosuke/typst-preview.nvim' },
     { src = 'https://github.com/folke/which-key.nvim' },
 
+    -- neogen
+    { src = 'https://github.com/danymat/neogen' },
+
     -- colorscheme
     { src = 'https://github.com/shatur/neovim-ayu' },
     { src = 'https://github.com/ellisonleao/gruvbox.nvim' },

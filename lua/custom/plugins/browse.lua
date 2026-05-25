@@ -13,3 +13,7 @@ local bookmarks = {
 vim.keymap.set('n', '<leader>b', function()
     require('browse').browse { bookmarks = bookmarks }
 end, { desc = '[B]rowse' })
+
+require('browse').setup {
+    bookmarks = bookmarks,
+}
